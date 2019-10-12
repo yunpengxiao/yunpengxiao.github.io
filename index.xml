@@ -1,0 +1,296 @@
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+   <title>Kevin&#39;s Blog</title>
+   <link>https://www.example.org/</link>
+   <description>Recent content on Kevin&#39;s Blog</description>
+   <generator>Hugo -- gohugo.io</generator>
+   <copyright>Copyright &amp;copy; 2019 - Kevin</copyright>
+   <lastBuildDate>Thu, 10 Oct 2019 22:32:47 -0700</lastBuildDate>
+   
+       <atom:link href="https://www.example.org/index.xml" rel="self" type="application/rss+xml" />
+   
+   
+     <item>
+       <title>About Blog</title>
+       <link>https://www.example.org/about/</link>
+       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+       
+       <guid>https://www.example.org/about/</guid>
+       <description>&lt;p&gt;Hugo is a static site engine written in Go. &lt;i class=&#34;far fa-clipboard&#34;&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;Cobra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;Viper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/jWalterWeatherman&#34;&gt;J Walter Weatherman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+     </item>
+   
+     <item>
+       <title>启动</title>
+       <link>https://www.example.org/posts/my-first-post/</link>
+       <pubDate>Thu, 10 Oct 2019 22:32:47 -0700</pubDate>
+       
+       <guid>https://www.example.org/posts/my-first-post/</guid>
+       <description>&lt;p&gt;这是给自己挖的一个大坑，在这里我会写下自己的一些技术上的经历。肯定会包括的内容有：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;刷题过程中的总结和思考&lt;/li&gt;
+&lt;li&gt;GitHub上一些源码的分析，从levelDB开始&lt;/li&gt;
+&lt;li&gt;一些技术债，从异步的原理开始&lt;/li&gt;
+&lt;li&gt;分布式系统的一些想法&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+     </item>
+   
+     <item>
+       <title>MD Cheatsheet</title>
+       <link>https://www.example.org/posts/style-guide/</link>
+       <pubDate>Tue, 14 Nov 2017 10:57:55 -0500</pubDate>
+       
+       <guid>https://www.example.org/posts/style-guide/</guid>
+       <description>
+
+&lt;h1 id=&#34;headings&#34;&gt;Headings&lt;/h1&gt;
+
+&lt;h1 id=&#34;heading-1&#34;&gt;Heading 1&lt;/h1&gt;
+
+&lt;h2 id=&#34;heading-2&#34;&gt;Heading 2&lt;/h2&gt;
+
+&lt;h3 id=&#34;heading-3&#34;&gt;Heading 3&lt;/h3&gt;
+
+&lt;h4 id=&#34;heading-4&#34;&gt;Heading 4&lt;/h4&gt;
+
+&lt;h5 id=&#34;heading-5&#34;&gt;Heading 5&lt;/h5&gt;
+
+&lt;h6 id=&#34;heading-6&#34;&gt;Heading 6&lt;/h6&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;headings-with-text&#34;&gt;Headings with Text&lt;/h1&gt;
+
+&lt;h1 id=&#34;heading-1-1&#34;&gt;Heading 1&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/p&gt;
+
+&lt;h2 id=&#34;heading-2-1&#34;&gt;Heading 2&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/p&gt;
+
+&lt;h3 id=&#34;heading-3-1&#34;&gt;Heading 3&lt;/h3&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/p&gt;
+
+&lt;h4 id=&#34;heading-4-1&#34;&gt;Heading 4&lt;/h4&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/p&gt;
+
+&lt;h5 id=&#34;heading-5-1&#34;&gt;Heading 5&lt;/h5&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/p&gt;
+
+&lt;h6 id=&#34;heading-6-1&#34;&gt;Heading 6&lt;/h6&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;block-elements&#34;&gt;Block Elements&lt;/h1&gt;
+
+&lt;h2 id=&#34;paragraphs-and-images&#34;&gt;Paragraphs and Images&lt;/h2&gt;
+
+&lt;p&gt;Moinsen! Der kess 🦄 Lichtspieltheater. Kittchen und Schwedenfilm krakelen blümerant Narr. Das flügge Personenvereinzelungsanlage dengeln. Kleintierzuchtverein und Naschkatze meucheln adrett Himmelfahrtskommando. Der gebeutelt Personenvereinzelungsanlage. Der butterweich Scharlatan. Der gemach Kokolores. Haderlump und Waldschrat abkupfern hanebüchen Lump. Der hochgestochen Stümper. Das Trinkhalle abkupfern der bierernst Eisbein. Die Lametta stibitzen der töricht Prahlhans. Die altbacken Himmelfahrtskommando. Kerbholz und Schürzenjäger erquicken garstig Schlachtschüssel. Jungfer und Herrengedeck auftakeln pompös Schnitzel. Ach du liebes Lottchen!&lt;/p&gt;
+
+&lt;p&gt;Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://placehold.it/350x150&#34; alt=&#34;Placeholder Image and Some Alt Text&#34; title=&#34;A title element for this placeholder image.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.&lt;/p&gt;
+
+&lt;h2 id=&#34;blockquote&#34;&gt;Blockquote&lt;/h2&gt;
+
+&lt;p&gt;This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;&lt;strong&gt;This is a blockquote&lt;/strong&gt;. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: the &lt;a href=&#34;http://html5doctor.com/the-figure-figcaption-elements/&#34;&gt;Figure-Figcaption&lt;/a&gt; and &lt;a href=&#34;http://html5doctor.com/the-details-and-summary-elements/&#34;&gt;Details-Summary&lt;/a&gt; elements are not currently supported in markdown.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;text-elements&#34;&gt;Text Elements&lt;/h1&gt;
+
+&lt;p&gt;The &lt;a href=&#34;#&#34;&gt;a element&lt;/a&gt; and &lt;a href=&#34;https://example.com&#34;&gt;external a element&lt;/a&gt; examples&lt;/p&gt;
+
+&lt;p&gt;The &lt;abbr&gt;abbr element&lt;/abbr&gt; and an &lt;abbr title=&#34;Abbreviation&#34;&gt;abbr&lt;/abbr&gt; element with title examples&lt;/p&gt;
+
+&lt;p&gt;The &lt;acronym title=&#34;A Cowboy Ran One New York Marathon&#34;&gt;ACRONYM&lt;/acronym&gt; element example&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;b element&lt;/strong&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;cite&gt;cite element&lt;/cite&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;code element&lt;/code&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;data value=&#34;3967381398&#34;&gt;data element&lt;/data&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;del&gt;del element&lt;/del&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;dfn&gt;dfn element&lt;/dfn&gt; and &lt;dfn title=&#34;Title text&#34;&gt;dfn element with title&lt;/dfn&gt; examples&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;em element&lt;/em&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;i element&lt;/em&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;ins&gt;ins element&lt;/ins&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;kbd&gt;kbd element&lt;/kbd&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;mark&gt;mark element&lt;/mark&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;q&gt;q element&lt;/q&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;q&gt;q element &lt;q&gt;inside&lt;/q&gt; a q element&lt;/q&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;s&gt;s element&lt;/s&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;samp&gt;samp element&lt;/samp&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;small&gt;small element&lt;/small&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;span&gt;span element&lt;/span&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;strong element&lt;/strong&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;sub&gt;sub element&lt;/sub&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;sup&gt;sup element&lt;/sup&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;time datetime=&#34;2005-05-15 19:00&#34;&gt;time element&lt;/time&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;u&gt;u element&lt;/u&gt; example&lt;/p&gt;
+
+&lt;p&gt;The &lt;var&gt;var element&lt;/var&gt; example&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;monospace-preformatted&#34;&gt;Monospace / Preformatted&lt;/h1&gt;
+
+&lt;p&gt;Code block wrapped in &amp;ldquo;pre&amp;rdquo; and &amp;ldquo;code&amp;rdquo; tags:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Loop through Divs using Javascript.
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;divs&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelectorAll&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;div&amp;#39;&lt;/span&gt;), &lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;divs&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;) {
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;divs&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Monospace Text wrapped in &amp;ldquo;pre&amp;rdquo; tags:&lt;/p&gt;
+
+&lt;pre&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;list-types&#34;&gt;List Types&lt;/h1&gt;
+
+&lt;h2 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;List Item 1&lt;/li&gt;
+&lt;li&gt;List Item 2&lt;/li&gt;
+&lt;li&gt;List Item 3
+
+&lt;ol&gt;
+&lt;li&gt;List Item 3.1&lt;/li&gt;
+&lt;li&gt;List Item 3.2
+
+&lt;ol&gt;
+&lt;li&gt;List Item 3.2.1&lt;/li&gt;
+&lt;li&gt;List Item 3.2 2&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;List Item 3.3&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;List Item 4&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;List Item 1&lt;/li&gt;
+&lt;li&gt;List Item 2&lt;/li&gt;
+&lt;li&gt;List Item 3
+
+&lt;ul&gt;
+&lt;li&gt;List Item 3.1&lt;/li&gt;
+&lt;li&gt;List Item 3.2
+
+&lt;ul&gt;
+&lt;li&gt;List Item 3.2.1&lt;/li&gt;
+&lt;li&gt;List Item 3.2 2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;List Item 3.3&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;List Item 4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;definition-list&#34;&gt;Definition List&lt;/h2&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Definition Term 1&lt;/dt&gt;
+&lt;dd&gt;Definition Description 1&lt;/dd&gt;
+&lt;dt&gt;Definition Term 2&lt;/dt&gt;
+&lt;dd&gt;Definition Description 2&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;tables&#34;&gt;Tables&lt;/h1&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Table Header 1&lt;/th&gt;
+&lt;th&gt;Table Header 2&lt;/th&gt;
+&lt;th&gt;Table Header 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Division 1&lt;/td&gt;
+&lt;td&gt;Division 2&lt;/td&gt;
+&lt;td&gt;Division 3&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Division 1&lt;/td&gt;
+&lt;td&gt;Division 2&lt;/td&gt;
+&lt;td&gt;Division 3&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Division 1&lt;/td&gt;
+&lt;td&gt;Division 2&lt;/td&gt;
+&lt;td&gt;Division 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;media-and-form-elements&#34;&gt;Media and Form Elements&lt;/h1&gt;
+
+&lt;p&gt;The remaining sections contain elements that cannot be represented in markdown. Please consult &lt;a href=&#34;https://github.com/bryanbraun/poor-mans-styleguide/blob/gh-pages/index.html&#34;&gt;the HTML version&lt;/a&gt;, to see these elements.&lt;/p&gt;
+</description>
+     </item>
+   
+ </channel>
+</rss>
