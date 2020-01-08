@@ -1,0 +1,371 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title class="articlesTitleSec">Loading...</title>
+  <link rel="stylesheet" href="/stylesheets/github-markdown.css">
+  <link rel="stylesheet" href="/stylesheets/bot-frame.css">
+  <!-- Math Support -->
+  <link rel="stylesheet" href="/stylesheets/katex.min.css">
+  <!-- Highlight Support -->
+  <link rel="stylesheet" href="/stylesheets/vs.css">
+  <style>
+    .headerQuoteSec blockquote {
+      padding: 0 0 0 15px;
+    }
+
+    .shareSec {
+      margin-top: 20px;
+    }
+
+    .qrCodeSec {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    .shareSec:hover .qrCodeSec {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(8px);
+    }
+
+    .qrCodeSec svg {
+      width: 60%;
+    }
+
+    /* Disable Share Section in print view and small screen */
+    @media print, screen and (max-width: 940px) {
+      .shareSec {
+        display: none;
+      }
+    }
+
+    /* Disable Share Section in print view and small screen */
+    @media screen and (max-height: 640px) {
+      .qrCodeSec {
+        display: none;
+      }
+    }
+
+    @media print {
+      .cover-title, .cover-subtitle {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 80%;
+      }
+
+      .cover-title {
+        top: 30%;
+      }
+
+      .cover-subtitle {
+        top: 70%;
+      }
+
+      .slide-cover-title {
+        font-size: xx-large;
+      }
+
+      .slide-cover-subtitle {
+        font-size: x-large;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navSec"></nav>
+      <div class="contactSec"></div>
+      <div class="headerTitleSec"></div>
+      <div class="headerQuoteSec"></div>
+      <div class="shareSec"></div>
+    </header>
+    <section class="markdown-body"></section>
+    <footer class="footerSec"></footer>
+  </div>
+  <!-- Basic Rendering -->
+  <script src="/javascripts/marked.js"></script>
+  <script src="/javascripts/bot-mark.js"></script>
+  <script src="/javascripts/bot-frame.js"></script>
+  <!-- Math Support -->
+  <script src="/javascripts/katex.min.js"></script>
+  <script src="/javascripts/auto-render.min.js"></script>
+  <!-- Highlight Support -->
+  <script src="/javascripts/highlight.pack.js"></script>
+  <!-- QR Code -->
+  <script src="/javascripts/qrcode.js"></script>
+  <script src="/javascripts/qrcode-svg.js"></script>
+  <script>
+    // Retrieve search string
+    function getSearchString(target) {
+      var searchStr = location.search;
+
+      var beg = searchStr.indexOf(target);
+      if (beg == -1) return '';
+
+      beg += target.length + 1;
+      var end = searchStr.indexOf('&', beg);
+      if (end == -1) end = searchStr.length;
+
+      return searchStr.substr(beg, end - beg);
+    }
+
+    var mdSec = document.getElementsByClassName('markdown-body')[0];
+
+    // Move first element from 'mdSec to 'dstSec if matching 'tagName
+    // Return innerHTML of the element
+    function moveFirstElement(dstSec, tagName) {
+      var childLen = mdSec.childNodes.length;
+      var curElem = 0;
+
+      // Find First Element
+      while (curElem < childLen &&
+        mdSec.childNodes[curElem].nodeType != 1)
+        curElem++;
+
+      if (curElem >= childLen) return null;
+      if (tagName && mdSec.childNodes[curElem].tagName.toLowerCase() != tagName.toLowerCase())
+        return null;
+      tagName = mdSec.childNodes[curElem].tagName;
+
+      var content = mdSec.childNodes[curElem].innerHTML;
+      dstSec.innerHTML = '<' + tagName + '>' + content + '</' + tagName + '>';
+      mdSec.removeChild(mdSec.childNodes[curElem]);
+      return content;
+    }
+
+    // Render LaTeX math inside 'mdSec
+    function renderMath() {
+      renderMathInElement(mdSec, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '\\[', right: '\\]', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false }
+        ],
+        ignoredTags: [
+          'script', 'noscript', 'style', 'textarea', 'pre', 'code'
+        ]
+      });
+    }
+
+    // Render highlight
+    function renderHighlight() {
+      hljs.initHighlighting();
+      console.log('highlight');
+    }
+
+    // Load style from '?style, and add style tag to document
+    function loadPrintStyle() {
+      var styles = {};
+      var stylesParam = getSearchString('style').split('+');
+      for (var i = 0; i < stylesParam.length; i++)
+        styles[stylesParam[i]] = true;
+
+      if (document.getElementsByClassName('markdown-slide').length != 0) {
+        styles['slide'] = true;
+        styles['cover'] = true;
+      }
+
+      if (styles['cover']) {
+        var headerTitleSec = document.getElementsByClassName('headerTitleSec')[0];
+        var headerQuoteSec = document.getElementsByClassName('headerQuoteSec')[0];
+
+        document.getElementsByTagName('header')[0].style.pageBreakAfter = 'always';
+        headerTitleSec.classList.add('cover-title');
+        headerQuoteSec.classList.add('cover-subtitle');
+
+        if (styles['slide']) {
+          headerTitleSec.classList.add('slide-cover-title');
+          headerQuoteSec.classList.add('slide-cover-subtitle');
+        }
+      }
+
+      var styleElem = document.createElement('style');
+
+      if (styles['toc-page-break'])
+        styleElem.innerHTML += '@media print { .markdown-toc { page-break-after: always; } }';
+      if (styles['two-column'])
+        styleElem.innerHTML += '@media print { .markdown-body { column-count: 2; } }';
+      if (styles['slide'])
+        styleElem.innerHTML += '@page { size: 297mm 210mm; }';  // landscape A4
+
+      document.head.appendChild(styleElem);
+    }
+
+    // Jump to hash anchor
+    function jumpToHash() {
+      if (!location.hash) return;
+
+      // handle invalid hash value
+      try {
+        document.querySelector(
+          '#' + new MarkdownRenderer().anchor(decodeURI(location.hash))
+        ).scrollIntoView();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    // Load Share Section
+    function loadShare() {
+      var shareSec = document.getElementsByClassName('shareSec')[0];
+      shareSec.innerHTML =
+        '<p><a style="cursor:pointer" ' +
+        'onclick="copyToClipboard(location.href)">' +
+        '<img src="/static/share.svg"> - ' +
+        'Copy link</a></p>' +
+        '<input type="text" id="copyTextContainer" style="display:none">' +
+        '<p class="qrCodeSec">' + qrCodeSVG(location.href, 360) + '</p>';
+    }
+
+    // Run Scripts inside 'mdSec
+    function runScripts() {
+      var scripts = mdSec.getElementsByTagName('script');
+      for (var i = 0; i < scripts.length; i++) {
+        eval(scripts[i].innerHTML);
+        //console.log('eval', scripts[i].innerHTML);
+      }
+    }
+
+    // Helper function to copy text
+    function copyToClipboard(value) {
+      // Note: only visible element is copyable
+      var copyText = document.getElementById('copyTextContainer');
+      copyText.style.display = 'block';
+      copyText.value = value;
+      copyText.select();
+      document.execCommand("copy");
+      copyText.style.display = 'none';
+    }
+
+    // Fix relative paths inside 'mdSec according to 'filename
+    function fixMarkdownPaths(filename) {
+
+      function getAbsPath(filename) {
+        // Trick: set and then get 'href' to find the absolute path of filename
+        // http://stackoverflow.com/questions/2639070/get-the-full-uri-from-the-href-property-of-a-link
+        var aElem = document.createElement('A');
+        aElem.href = filename;
+
+        // NOT Same Origin File
+        if (aElem.href.toLowerCase().indexOf(location.origin.toLowerCase()) == -1)
+          return null;
+
+        // Get absPath (including ending '/')
+        return aElem.href.substr(0, aElem.href.lastIndexOf('/') + 1);
+      }
+
+      function getRelPath(basePath, destPath) {
+        var commonLen = 0;
+        for (; commonLen < basePath.length || commonLen < destPath.length; commonLen++)
+          if (basePath[commonLen] != destPath[commonLen])
+            break;
+
+        for (; commonLen > 0; commonLen--)
+          if (basePath[commonLen - 1] == '/')
+            break;
+
+        // Case: Contains Relationship
+        if (commonLen >= basePath.length || commonLen >= destPath.length)
+          commonLen = Math.min(basePath.length, destPath.length);
+
+        var parents = basePath.substring(commonLen)
+          .replace(/[^\/]*$/, '').replace(/.*?\//g, '../');
+
+        return (parents + destPath.substring(commonLen)) || './';
+      }
+
+      var mdAbsPath = getAbsPath(filename);
+
+      function fixAll(tagName, attrName, fix) {
+        var elems = mdSec.getElementsByTagName(tagName);
+        for (var j = 0; j < elems.length; j++) {
+
+          var rawSrc = elems[j].getAttribute(attrName);  // original literal
+          var src = elems[j][attrName];  // parsed source path
+
+          if (src.toLowerCase().indexOf(location.origin.toLowerCase()) != -1 &&  // Same Origin
+            rawSrc.toLowerCase().indexOf(location.origin.toLowerCase()) == -1 &&  // NOT Absolute Path
+            rawSrc[0] != '/' &&  // NOT Root-Relative Path
+            rawSrc[0] != '#')  // NOT Hash
+          {
+            // Get absPath
+            var aElem = document.createElement('A');
+            aElem.href = mdAbsPath + rawSrc;
+            var absPath = aElem.href;
+
+            // Get relPath
+            var relPath = getRelPath(location.origin + location.pathname, absPath);
+
+            // Set with pattern
+            elems[j][attrName] = fix(relPath);
+          }
+        }
+      }
+
+      fixAll('A', 'href', function (relPath) {
+        var segments = relPath.split('.md');
+        if (segments.length == 2) {
+          if (segments[1][0] == '#') {
+            // hard-coded anchor generator
+            segments[1] = '#' + segments[1]
+              .toLowerCase()
+              .replace(/[^\w\u4E00-\u9FFF%]+/g, '-')
+              .replace(/^-+/g, '')
+              .replace(/-+$/g, '');
+          }
+          relPath = './?post=' + segments.join('');
+        }
+        return relPath;
+      });
+      fixAll('IMG', 'src', function (relPath) { return relPath; });
+      fixAll('SOURCE', 'src', function (relPath) { return relPath; });
+    }
+
+    // Get post filename
+    var post = getSearchString('post') || 'Archive';
+
+    // Hide contact section
+    var contactSec = document.getElementsByClassName('contactSec')[0];
+    contactSec.style.display = 'none';
+
+    // Load post
+    loadLayout(post + '.md', function (md, title) {
+      var renderer = new MarkdownRenderer();
+      mdSec.innerHTML = renderer.render(md);
+
+      // fix relative paths before done
+      fixMarkdownPaths(post);
+
+      // Detect title and handle contactSec
+      var titleStr =
+        moveFirstElement(document.getElementsByClassName('headerTitleSec')[0], 'h1');
+      if (titleStr) {
+        moveFirstElement(document.getElementsByClassName('headerQuoteSec')[0]);
+        contactSec.parentElement.removeChild(contactSec);
+      }
+      else {
+        titleStr = post.substr(post.lastIndexOf('/') + 1);  // filename
+        contactSec.style.display = 'block';
+      }
+
+      renderMath();
+      renderHighlight();
+      loadPrintStyle();
+      jumpToHash();
+      loadShare();
+      runScripts();
+
+      // Done
+      title(titleStr);
+    });
+  </script>
+</body>
+</html>

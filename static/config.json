@@ -1,0 +1,24 @@
+﻿{
+  "name": "BOT Man JL",
+  "contact": {
+    "name": "BOT Man | John Lee",
+    "github": {
+      "text": "BOT-Man-JL @ GitHub",
+      "link": "https://github.com/BOT-Man-JL",
+      "img": "/static/github.svg"
+    },
+    "email": {
+      "text": "g123nn@hotmail.com",
+      "link": "mailto:g123nn@hotmail.com",
+      "img": "/static/email.svg"
+    }
+  },
+  "pages": {
+    "🏠": "/",
+    "📝": "/articles/"
+  },
+  "footer": [
+    "<a href='https://github.com/BOT-Man-JL/BOT-Man-JL.github.io'>About BOT Mark and BOT Frame</a>",
+    "&copy; BOT Man, 2018"
+  ]
+}

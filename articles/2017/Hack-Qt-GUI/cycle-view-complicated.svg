@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<svg width="460" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+
+ <g transform="scale(1) translate(4,84) " id="graph0" class="graph">
+  <title>G</title>
+  <g id="node1" class="node">
+   <title transform="translate(-4.5,5.625) translate(4.5,106.875) ">yuml_main_view</title>
+   <polygon id="svg_1" stroke="black" points="91.5,62 0.5,62 0.5,105 91.5,105 91.5,62 " fill="white"/>
+   <text id="svg_2" font-size="10px" font-family="Verdana" y="85.2" x="46" text-anchor="middle">Main View</text>
+  </g>
+  <g id="node2" class="node">
+   <title transform="translate(-1.125,13.5) ">yuml_auth_view</title>
+   <polygon id="svg_3" stroke="black" points="270.375,-67 181.375,-67 181.375,-24 270.375,-24 270.375,-67 " fill="white"/>
+   <text id="svg_4" font-size="10px" font-family="Verdana" y="-43.8" x="225.875" text-anchor="middle">Auth View</text>
+  </g>
+  <g stroke="null" transform="rotate(-23.150415420532227 129.0890655517578,25.26125717163089) " id="edge1" class="edge">
+   <title stroke="null" transform="translate(10.125,14.625) translate(-30.375,11.25) translate(-2.219649314880371,-11.040220260620117) translate(-10.125,46.125) translate(74.640625,-2.1157989501953125) scale(1.5743454694747925,1) translate(-74.640625,2.1157989501953125) ">yuml_main_view-&gt;yuml_auth_view</title>
+   <path stroke="black" id="svg_5" fill="none" d="m63.099885,30.40108c38.570677,-3.1319 86.640167,-8.1475 127.193732,-13.2355"/>
+   <polygon stroke="black" id="svg_6" points="206.0071563720703,15.139680802822113 189.16954040527344,12.71898078918457 198.29286193847656,16.13437843322754 190.5785675048828,17.129079818725586 190.5785675048828,17.129079818725586 190.5785675048828,17.129079818725586 198.29286193847656,16.13437843322754 191.98760986328125,21.539079666137695 206.0071563720703,15.139680802822113 206.0071563720703,15.139680802822113 " fill="black"/>
+   <text transform="matrix(1.5743454694747923,0,0,1,-45.089154122397304,-11.040220260620117) " stroke="null" id="svg_7" font-size="8px" font-family="Verdana" y="47.1449" x="87.797512" text-anchor="middle">has not login</text>
+  </g>
+  <g id="node3" class="node">
+   <title transform="translate(3.375,-1.125) translate(-2.25,109.125) ">yuml_function_a_nview</title>
+   <polygon id="svg_8" stroke="black" points="453.125,50 363.125,50 363.125,108 453.125,108 453.125,50 " fill="white"/>
+   <text id="svg_9" font-size="10px" font-family="Verdana" y="73.2" x="408.125" text-anchor="middle">Function A</text>
+   <text id="svg_10" font-size="10px" font-family="Verdana" y="88.2" x="408.125" text-anchor="middle">View</text>
+  </g>
+  <g id="edge2" class="edge">
+   <title transform="translate(-5.625,1.125) translate(5.625,115.875) ">yuml_main_view-&gt;yuml_function_a_nview</title>
+   <path id="svg_11" stroke="black" fill="none" d="m91.7417,92.6438c65.9273,2.6839 189.0093,2.8028 259.9983,0.3565"/>
+   <polygon id="svg_12" stroke="black" points="361.8219909667969,92.62069702148438 351.6600036621094,88.50019836425781 356.82598876953125,92.80889892578125 351.8290100097656,92.99700164794922 351.8290100097656,92.99700164794922 351.8290100097656,92.99700164794922 356.82598876953125,92.80889892578125 351.9989929199219,97.4937973022461 361.8219909667969,92.62069702148438 361.8219909667969,92.62069702148438 " fill="black"/>
+   <text id="svg_13" font-size="8px" font-family="Verdana" y="101.4082" x="109.57" text-anchor="middle">login already</text>
+  </g>
+  <g stroke="null" transform="rotate(-24.646556854248047 104.19950103759766,5.2786474227905344) " id="edge3" class="edge">
+   <title stroke="null" transform="translate(0.728905439376831,4.916079998016357) translate(10.125,14.625) translate(-5.625,9) translate(-0.8478342890739441,-5.532664775848389) translate(-39.375,38.25) translate(52.332496643066406,-33.59375) scale(1.4127006530761719,1) translate(-52.332496643066406,33.59375) translate(130.40203857421875,-15.5625) scale(1.2593883275985718,1) translate(-130.40203857421875,15.5625) ">yuml_auth_view-&gt;yuml_main_view</title>
+   <path stroke="black" id="svg_14" fill="none" d="m184.947942,3.666215c-43.23485,3.0703 -97.516372,8.0537 -143.615635,13.1389"/>
+   <polygon stroke="black" id="svg_15" points="23.4510657787323,18.831416606903076 42.47451853752136,21.266215801239014 32.17134356498718,17.843116283416748 40.89108729362488,16.854915142059326 40.89108729362488,16.854915142059326 40.89108729362488,16.854915142059326 32.17134356498718,17.843116283416748 39.30943751335144,12.443713665008545 23.4510657787323,18.831416606903076 23.4510657787323,18.831416606903076 " fill="black"/>
+   <text stroke="null" transform="matrix(1.77913871287501,0,0,1,-74.25519852921796,4.916079998016357) " id="svg_16" font-size="8px" font-family="Verdana" y="-7.579665" x="126.620237" text-anchor="middle">back</text>
+  </g>
+  <g stroke="null" transform="rotate(26.854928970336914 297.6018676757813,16.40498542785639) " id="edge4" class="edge">
+   <title stroke="null" transform="translate(-15.75,10.125) translate(-13.5,0) translate(-7.875,-23.625) translate(-2.1717209815979004,9.096586227416992) translate(0,57.375) translate(271.54400634765625,11.610899925231934) scale(1.445338249206543,1) translate(-271.54400634765625,-11.610899925231934) ">yuml_auth_view-&gt;yuml_function_a_nview</title>
+   <path stroke="black" id="svg_17" fill="none" d="m232.247276,7.207486c35.063906,5.087 79.031095,10.336 116.271681,13.9245"/>
+   <polygon stroke="black" id="svg_18" points="362.9564514160156,22.46898651123047 349.49456787109375,16.682085037231445 355.7947692871094,21.805587768554688 348.6316833496094,21.142288208007812 348.6316833496094,21.142288208007812 348.6316833496094,21.142288208007812 355.7947692871094,21.805587768554688 347.7688293457031,25.60248565673828 362.9564514160156,22.46898651123047 362.9564514160156,22.46898651123047 " fill="black"/>
+   <text transform="matrix(1.445338249206543,0,0,1,-120.92893236939562,0) " stroke="null" id="svg_19" font-size="8px" font-family="Verdana" y="18.830886" x="260.412402" text-anchor="middle">login</text>
+  </g>
+  <g id="edge6" class="edge">
+   <title transform="translate(1.125,109.125) ">yuml_function_a_nview-&gt;yuml_main_view</title>
+   <path id="svg_20" stroke="black" fill="none" d="m362.947,75.5043c-65.6,-2.6986 -188.667,-2.8321 -259.952,-0.4005"/>
+   <polygon id="svg_21" stroke="black" points="92.86669921875,75.481201171875 103.0270004272461,79.60560035705566 97.86329650878906,75.29499816894531 102.86000061035156,75.10879898071289 102.86000061035156,75.10879898071289 102.86000061035156,75.10879898071289 97.86329650878906,75.29499816894531 102.69200134277344,70.61190032958984 92.86669921875,75.481201171875 92.86669921875,75.481201171875 " fill="black"/>
+   <text id="svg_22" font-size="8px" font-family="Verdana" y="66.1336" x="345.122" text-anchor="middle">back</text>
+  </g>
+  <g stroke="null" transform="rotate(26.834421157836914 339.9107666015625,7.663375377654921) " id="edge5" class="edge">
+   <title stroke="null" transform="translate(-15.75,10.125) translate(-13.5,0) translate(-2.773906707763672,11.706279754638672) translate(29.25,38.25) translate(300.79400634765625,-24.21875) scale(1.5732992887496948,1) translate(-300.79400634765625,24.21875) ">yuml_function_a_nview-&gt;yuml_auth_view</title>
+   <path stroke="black" id="svg_23" fill="none" d="m411.051411,17.74548c-38.294105,-5.089 -86.168029,-10.3281 -126.609687,-13.8948"/>
+   <polygon stroke="black" id="svg_24" points="268.7701110839844,2.522979736328125 283.42852783203125,8.304779052734375 276.5673828125,3.1836814880371094 284.3646240234375,3.844280242919922 284.3646240234375,3.844280242919922 284.3646240234375,3.844280242919922 276.5673828125,3.1836814880371094 285.3007507324219,-0.6163215637207031 268.7701110839844,2.522979736328125 268.7701110839844,2.522979736328125 " fill="black"/>
+   <text transform="matrix(1.5732992887496948,0,0,1,-172.44498989928252,0) " stroke="null" id="svg_25" font-size="8px" font-family="Verdana" y="5.53088" x="354.811382" text-anchor="middle">logout</text>
+  </g>
+ </g>
+</svg>

@@ -1,120 +1,58 @@
-<!doctype html>
-
-<html lang="en">
-
+﻿<!doctype html>
+<html>
 <head>
-  <title>Kevin&#39;s Blog</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="Kevin Xiao" /><link rel="alternate" type="application/rss+xml+xml" href="https://www.example.org/index.xml" title="Kevin's Blog" /><meta name="generator" content="Hugo 0.58.3" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
-  <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
-  <link rel="stylesheet" type="text/css" href="https://www.example.org/css/styles.css" /></head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>Loading...</title>
+  <link rel="stylesheet" href="/stylesheets/github-markdown.css">
+  <link rel="stylesheet" href="/stylesheets/bot-frame.css">
+  <style>
+    .markdown-body {
+      padding: 20px 0;
+    }
 
+      .markdown-body blockquote {
+        border-left: none;
+      }
+
+      .markdown-body a:hover,
+      .markdown-body a:active {
+        text-shadow: 0 0 15px orange;
+        text-decoration: none;
+      }
+  </style>
+</head>
 <body>
-  <div id="container">
+  <div class="wrapper">
     <header>
-      <h1>
-                <a href="https://www.example.org/">Kevin&rsquo;s Blog</a>
-            </h1>
-
-      <ul id="social-media">
-        
-        
-          
-        <li><a href="https://github.com/yunpengxiao"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a></li>
-           
-      </ul>
-      
-      <p><em>A place for Kevin to share his life</em></p>
-      
+      <nav class="navSec"></nav>
+      <div class="contactSec"></div>
     </header>
+    <section class="markdown-body"></section>
+    <footer class="footerSec"></footer>
+  </div>
+  <script src="/javascripts/marked.js"></script>
+  <script src="/javascripts/bot-mark.js"></script>
+  <script src="/javascripts/bot-frame.js"></script>
+  <!-- QR Code -->
+  <script src="/javascripts/qrcode.js"></script>
+  <script src="/javascripts/qrcode-svg.js"></script>
+  <script>
+    loadLayout('/static/home.md', function (md, title) {
+      var mdSec = document.getElementsByClassName('markdown-body')[0];
 
-    
-<nav>
-    <ul>
-        
-        <li>
-            <a class="" href="https://www.example.org/posts/">
-                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="active" href="https://www.example.org/about/">
-                <i class="fa-li fa  fa-lg"></i><span>About Blog</span>
-            </a>
-        </li>
-        
-    </ul>
-</nav>
+      var renderer = new MarkdownRenderer();
+      mdSec.innerHTML = renderer.render(md);
 
-    <main>
+      title('Home');
 
-
-
-
-<section id="home">
-        <ul>
-          
-          <li class="first">
-            <h1><a href="https://www.example.org/posts/my-first-post/" title="启动">启动</a></h1> 
-            <aside>
-    <ul>
-        <li>
-            <time class="post-date" datetime="2019-10-10T22:32:47-07:00">Oct 10, 2019</time>
-        </li>
-        
-
-        
-
-        <li>One minute read</li>
-    </ul>
-</aside>
-
-            <p>这是给自己挖的一个大坑，在这里我会写下自己的一些技术上的经历。肯定会包括的内容有：
- 刷题过程中的总结和思考 GitHub上一些源码的分析，从levelDB开始 一些技术债，从异步的原理开始 分布式系统的一些想法  </p>
-            
-          </li>
-          
-          <li >
-            <h1><a href="https://www.example.org/posts/style-guide/" title="MD Cheatsheet">MD Cheatsheet</a></h1> 
-            <aside>
-    <ul>
-        <li>
-            <time class="post-date" datetime="2017-11-14T10:57:55-05:00">Nov 14, 2017</time>
-        </li>
-        
-
-        
-
-        <li>4 minutes read</li>
-    </ul>
-</aside>
-
-            <p>Headings Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Headings with Text Heading 1 Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.</p>
-            
-            <a href="https://www.example.org/posts/style-guide/">Read more…</a>
-            
-          </li>
-          
-        </ul>
-      </section>
-
-
-
-</main>
-    <footer>
-        <h6>Copyright &copy; 2019 - Kevin |
-            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
-            <a href="https://www.example.org/index.xml">Subscribe </a></h6>
-    </footer>
-</div>
-<script src="https://www.example.org/js/scripts.js"></script>
-
+      var scripts = mdSec.getElementsByTagName('script');
+      for (var i = 0; i < scripts.length; i++) {
+        eval(scripts[i].innerHTML);
+        //console.log('eval', scripts[i].innerHTML);
+      }
+    });
+  </script>
 </body>
-
 </html>
-
